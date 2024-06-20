@@ -1,0 +1,448 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+/*Classe para deixar o texto não selecionável*/
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/*Definiçõees gerrais do body*/
+body {
+    background-color: black;
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    scroll-behavior: smooth !important;
+}
+
+/*Declaração de variáveis de cor*/
+:root {
+    --roxo: #8C52FF;
+    --magenta: #CB6CE6;
+    --rosa: #FF66C4;
+    --vermelho: #FF5757;
+}
+
+/*Barra de navegação*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+background: #f1f1f1; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+background: #888; 
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+/*Gradiente*/
+#gradiente {
+    width: 70%;
+    z-index: -1;
+    transform: translate(-42.12972225%, -62.38418248%) rotate(70deg);
+    position: absolute;
+}
+
+/*Título*/
+h1 {
+    font-size: 95px;
+    text-align: center;
+    margin: 13vh 0 13vh 0;
+    line-height: 1;
+}
+
+.ponto {
+    color: #8C52FF;
+}
+
+/*Introdução*/
+#introducao {
+    background-color: white;
+    padding: 3.5% 20% 3.5% 20%;
+    color: black;
+}
+
+h2 {
+    font-size: 65px;
+}
+
+#introducao-txt {
+    font-size: 22px;
+    filter: opacity(60%);
+    margin-top: 1.5vh;
+}
+
+li {
+    list-style-image: url(images/circle-check-regular.svg);
+    font-size: 4.2rem;
+}
+
+#introducao-pilares-span {
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+#introducao-pilares {
+    display: flex;
+    justify-content: space-around;
+}
+
+
+/*Etiquetas pilares*/
+header {
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    height: 15vh;
+    position: sticky;
+    top: 0;
+}
+
+header a {
+    height: 7vh;
+    width: 17%;
+    font-size: 28px;
+    font-weight: 600;
+    margin: 0 1px 0 1px;
+    cursor: pointer;
+    transition: .5s; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-right-radius: 40px;
+    border-bottom-left-radius: 40px; 
+}
+
+#header-roxo {
+    background-color: var(--roxo);
+    height: 10vh;
+}
+
+#header-magenta {
+    background-color: var(--magenta);
+}
+
+#header-rosa {
+    background-color: var(--rosa);
+}
+
+#header-vermelho {
+    background-color: var(--vermelho);
+}
+
+#linha {
+    background: linear-gradient(to right, var(--roxo) 0%, var(--roxo) 35%, var(--magenta) 35%, var(--magenta) 55%, var(--rosa) 55%, var(--rosa) 75%, var(--vermelho) 50%, var(--vermelho) 100%);
+    height: 5px;
+    width: 100%;
+    position: absolute !important;
+    z-index: -3;
+}
+
+/*Linha divisória*/
+#linha2 {
+    margin: 0 auto;
+    width: 70%;
+    background-color: white;
+    margin-bottom: 10vh;
+    margin-top: 5vh;
+    border: 1px white solid;
+    border-radius: 15px;
+}
+
+/*Conteúdo pilar*/
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr .4fr;
+    column-gap: 1vh;
+    width: 70%;
+    margin: 0 auto;
+    background: none;
+    color: white;
+    text-align: justify;
+}
+
+/*Introdução do Pilar*/
+
+#introducao-roxo{
+    width: 90%;
+}
+
+#introducao-roxo h3{
+    font-size: 32.2px;
+}
+
+#introducao-roxo p{
+    font-size: 18px;
+}
+
+/*Blocos roxos que a gente não sabe o que vai colocar*/
+
+#blocos-roxo{
+    width: 100%;
+}
+
+.blocos-roxo-titulo{
+    position: relative;
+    font-size: 21.8px;
+    width: 45%;
+    height: 5vh;
+    text-align: center;
+}
+
+.blocos-roxo-titulo-cor {
+    background-color: var(--roxo);
+}
+
+.blocos-magenta-titulo-cor {
+    background-color: var(--magenta);
+}
+
+.blocos-rosa-titulo-cor {
+    background-color: var(--rosa);
+}
+
+.blocos-vermelho-titulo-cor {
+    background-color: var(--vermelho);
+}
+
+.blocos-roxo-titulo h4{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.blocos-roxo-info{
+    display: grid;
+    grid-template-columns: .7fr 1fr .2fr;
+    align-items: center;
+    justify-items: center;
+    text-align: left;
+    font-size: 19.4px;
+    width: 100%;
+    height: 12vh;
+    position: relative;
+}
+
+.blocos-roxo-info-cor {
+    background: linear-gradient(90deg, rgba(140,82,255,0.12) 5%, rgba(0,0,0,1) 100%);
+    border: solid var(--roxo) 1px;
+}
+
+.blocos-magenta-info-cor {
+    background: linear-gradient(90deg, rgba(203, 108, 230,0.12) 5%, rgba(0,0,0,1) 100%);
+    border: solid var(--magenta) 1px;
+}
+
+.blocos-rosa-info-cor {
+    background: linear-gradient(90deg, rgba(255, 102, 196,0.12) 5%, rgba(0,0,0,1) 100%);
+    border: solid var(--rosa) 1px;
+}
+
+.blocos-vermelho-info-cor {
+    background: linear-gradient(90deg, rgba(255, 87, 87,0.12) 5%, rgba(0,0,0,1) 100%);
+    border: solid var(--vermelho) 1px;
+}
+
+.blocos-roxo-info svg{
+    fill:  white;
+}
+
+.blocos-roxo-numero{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 20px;
+    height: 21px;
+    font-size: 15px;
+    text-align: center;
+}
+
+.blocos-roxo-numero-cor{
+    background-color: var(--roxo);
+}
+
+.blocos-magenta-numero-cor{
+    background-color: var(--magenta);
+}
+
+.blocos-rosa-numero-cor{
+    background-color: var(--rosa);
+}
+
+.blocos-vermelho-numero-cor{
+    background-color: var(--vermelho);
+}
+
+#main-roxo-graficos{
+    width: 100%;
+    grid-column: span 2;
+    text-align: center;
+    font-size: 16.8px;
+}
+
+#main-roxo-graficos span{
+    margin: 0 auto;
+}
+
+.prioridades-span {
+    text-align: left;
+    width: 60%;
+}
+
+#main-roxo-graficos .blocos-roxo-titulo{
+    width: 20%;
+    height: 4vh;
+}
+
+#main-roxo-linha{
+    width: 100%;
+    height: .5vh;
+    margin-bottom: 5vh;
+    
+}
+
+.main-roxo-linha-cor {
+    background-color: var(--roxo);
+}
+
+.main-magenta-linha-cor {
+    background-color: var(--magenta);
+}
+
+.main-rosa-linha-cor {
+    background-color: var(--rosa);
+}
+
+.main-vermelho-linha-cor {
+    background-color: var(--vermelho);
+}
+
+.roxo-graficos{
+    display: grid;
+    grid-template-columns: .1fr 1fr .1fr .2fr;
+    align-items: center;
+    justify-items: left;
+    width: 100%;
+    font-size: 15px;
+    margin-bottom: 3vh;
+}
+
+#grafico-icon-vermelho{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: var(--vermelho);
+}
+
+.grafico-icon-svg{
+    position: absolute;
+    top: 75%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#grafico-linha-vermelha{
+    width: 97%;
+    height: .5vh;
+    background: linear-gradient(90deg, var(--vermelho) 76%, rgba(82,66,66,1) 76%);
+}
+
+#grafico-icon-verde{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(126,217,87,1);
+}
+
+#grafico-linha-verde{
+    width: 97%;
+    height: .5vh;
+    background: linear-gradient(90deg, rgba(126,217,87,1) 23%, rgba(82,66,66,1) 23%);
+}
+
+#grafico-icon-amarelo{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    background-color: rgba(255,189,89,1);
+}
+
+#grafico-linha-amarela{
+    width: 97%; 
+    height: .5vh;
+    background: linear-gradient(90deg, rgba(255,189,89,1) 44%, rgba(82,66,66,1) 44%);
+}
+
+#main-magenta {
+    display: none;
+}
+
+table, td, th {
+    border: 2px var(--magenta) solid;
+    text-align: center;
+    font-size: 18px;
+}
+
+table {
+    width: 100%;
+    background: linear-gradient(90deg, rgba(203, 108, 230,0.12) 5%, rgba(0,0,0,1) 100%);
+}
+
+td, th {
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+#section-planilha {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+    gap: 3%;
+}
+
+#planilha-txt{
+    text-align: justify;
+}
+
+#main-rosa {
+    display: none;
+}
+
+#main-vermelho {
+    display: none;
+}
+
+footer {
+    height: 10vh;
+}
+
+
+/*
+Coisas para fazer:
+- Pesquisar uma introdução 
+- Pesquisar objetivos
+- Descobrir o que colocar na parte de baixo, algo exemplificando em cada um
+*/
